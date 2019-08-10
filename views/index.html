@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="../static/stylesheets/style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+    <div class="App">
+        <div class="parallax slide-3">
+            <img id="welcome" src=../static/images/welcome.svg>
+        </div>
+
+        <div class="content-text" id="info">
+            <div class="section-header text-center">
+                <h1>Welcome to our wedding site1</h1>
+            </div>
+            Hello - welcomed to our wedding site.  We hope you can join us on our special day.
+        </div>
+
+        <div class="divider"><span></span><span>♥</span><span></span></div>
+        <div class="container-fluid" id="where">
+            <div class="section-header text-center">
+                <h1>So where is this?</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg" style="min-height:440px;">
+                    <iframe class="rounded-right rounded-left" width="100%" height="100%" frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJWbIjZVIarRIR_WkmnuHhidc&key=AIzaSyC14ePrxBCOqEIJJIsAMZX357cbVEV_9BQ" allowfullscreen></iframe>
+                </div>
+                <div class="col-lg pt-3 pt-lg-0" id="beduer-col">
+                    <div id="beduer">
+                        <h2>Bedeur</h2>
+                        <div>
+                        Located in the small village of Bedeur France, about a 15 minute drive from the town of Fijac.
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="img-thumbnail beduer-image" src=../static/images/beduer-1.jpg>
+                            </div>
+                            <div class="col-4">
+                                <img class="img-thumbnail beduer-image" src=../static/images/beduer-3.jpg>
+                                <img class="img-thumbnail beduer-image" src=../static/images/beduer-4.jpg>
+                            </div>
+                            <div class="col-4">
+                                <img class="img-thumbnail beduer-image" src=../static/images/beduer-2.jpg>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--        <div class="parallax slide-3"></div>-->
+        <div class="divider"><span></span><span>♥</span><span></span></div>
+        <div class="container-fluid" id="directions">
+            <div class="section-header text-center">
+                <h1>How do I get there from ...</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg travel-blurb">
+                    <div class="card">
+                        <img class="card-img-top direction-img" src="../static/images/toulouse.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Toulouse</h4>
+                            <p class="card-text">How to get here from toutlouse - drive quick, take train, fly</p>
+                            <a href="#" class="btn btn-primary">Google maps link maybe?</a>
+                        </div>
+                     </div>
+                </div>
+                <div class="col-lg travel-blurb">
+                    <div class="card ">
+                        <img class="card-img-top direction-img" src="../static/images/bordeaux.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Bordeaux</h4>
+                            <p class="card-text">How to get here from toutlouse - drive quick, take train, fly</p>
+                            <a href="#" class="btn btn-primary">Google maps link maybe?</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg travel-blurb">
+                    <div class="card ">
+                        <img class="card-img-top direction-img" src="../static/images/paris.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Paris</h4>
+                            <p class="card-text">How to get here from toutlouse - drive quick, take train, fly</p>
+                            <a href="#" class="btn btn-primary">Google maps link maybe?</a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+
+<!--        <div class="parallax slide-4"></div>-->
+        <div class="divider"><span></span><span>♥</span><span></span></div>
+        <div class="container-fluid" id="rsvp">
+            <div class="section-header text-center">
+                <h1>RSVP</h1>
+            </div>
+        <form id="rsvp-form" class="rounded-right rounded-left">
+            <div class="form-group col-6 offset-3">
+                <label for="name">Names</label>
+                <input type="name" class="form-control" id="name">
+            </div>
+            <div class="form-group col-6  offset-3">
+                <label for="joiningfor">I'll be joining you for:</label>
+                <select multiple class="form-control" id="joiningfor">
+                    <option>Friday Night Pizzas</option>
+                    <option selected>Saturday Wedding</option>
+                    <option>Sunday BBQ</option>
+                </select>
+            </div>
+            <div class="form-group col-6  offset-3" id="accomadation">
+                Would you like to use our sourced accomadation and stay at the Cheateau?
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="accomadation" id="yesaccomadate" value="yesaccomadate" checked>
+                    <label class="form-check-label" for="yesaccomadate">
+                        Yes
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="accomadation" id="noaccomadate" value="noaccomadate">
+                    <label class="form-check-label" for="noaccomadate">
+                        No
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+        <div class="divider"><span></span><span>♥</span><span></span></div>
+    </div>
+
+
+</body>F
+</html>
