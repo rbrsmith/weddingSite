@@ -6,6 +6,7 @@ var logger = require('morgan');
 var mainRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var rsvpRouter = require('./routes/rsvp');
+var statusRouter = require('./routes/status');
 
 var bodyParser = require('body-parser');
 
@@ -32,6 +33,7 @@ app.use("/", loginRouter);
 app.use('/main', mainRouter);
 app.use('/login', loginRouter);
 app.use("/rsvp", rsvpRouter);
+app.use("/status", statusRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
