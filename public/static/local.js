@@ -9,7 +9,7 @@ $(document).ready(function () {
 
       $.ajax({
          type: 'POST',
-         url: 'http://localhost:8080',
+         url: 'http://rosolynwedding.com:8080',
          contentType: 'application/json; charset=utf-8',
          dataType: 'html',
          data: JSON.stringify(rsvpFormData)
