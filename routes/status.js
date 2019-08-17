@@ -6,7 +6,7 @@ function checkForRSVPSpring(mongoStatus, res) {
 
     ps.lookup({
         command: 'java',
-        arguments: 'spring-boot-0.1.0.jar',
+        arguments: '.*rsvp.*jar',
     }, function(err, resultList ) {
         if (err) {
             throw new Error(err);
