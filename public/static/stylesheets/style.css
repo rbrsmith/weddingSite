@@ -166,6 +166,6 @@ html, body {
 @media only screen and (max-width:399px) {
     #bbq-man {
         height:auto;
-        width:auto;
+        width:100%;
     }
 }
