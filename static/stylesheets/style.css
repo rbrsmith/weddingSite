@@ -46,7 +46,7 @@ html, body {
 
 .slide-3{
     /* The image used */
-    background-image: url("../images/wedding-3.jpg");
+    background-image: url("../images/main.jpeg");
 
 }
 
@@ -173,8 +173,8 @@ html, body {
 
 
 #french-man {
-    width:500px;
-    margin-left:50px;
+    width: 500px;
+    margin-left: 50px;
 }
 
 @media only screen and (max-width:399px) {
@@ -194,8 +194,8 @@ html, body {
     }
 
     #french-man {
-        height:auto;
-        width:100%;
-        margin-left:0px;
+        height: auto;
+        width: 100%;
+        margin-left: 0px;
     }
 }
