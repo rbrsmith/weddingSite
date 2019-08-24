@@ -162,10 +162,28 @@ html, body {
 #bbq-man {
     width: 400px;
 }
+#uk-man {
+    width:325px;
+    margin-left:200px;
+}
+#canada-man {
+    width:500px;
+    margin-left:50px;
+}
 
 @media only screen and (max-width:399px) {
     #bbq-man {
         height:auto;
         width:100%;
+    }
+    #uk-man {
+        height:auto;
+        width:100%;
+        margin-left:0px;
+    }
+    #canada-man {
+        height:auto;
+        width:100%;
+        margin-left:0px;
     }
 }
