@@ -171,6 +171,12 @@ html, body {
     margin-left:50px;
 }
 
+
+#french-man {
+    width: 500px;
+    margin-left: 50px;
+}
+
 @media only screen and (max-width:399px) {
     #bbq-man {
         height:auto;
@@ -185,5 +191,11 @@ html, body {
         height:auto;
         width:100%;
         margin-left:0px;
+    }
+
+    #french-man {
+        height: auto;
+        width: 100%;
+        margin-left: 0px;
     }
 }
