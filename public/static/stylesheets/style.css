@@ -3,6 +3,7 @@ html, body {
     margin:0px;
 }
 
+
 #root {
     height: 100%;
 }
@@ -24,11 +25,13 @@ html, body {
     background-size: cover;
 }
 
-
-@media only screen and (max-width:1500px) {
+@media only screen {
     .parallax {
-        background-attachment: inherit;
+        background-attachment: revert;
         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height:100%;
     }
 }
 
@@ -177,25 +180,82 @@ html, body {
     margin-left: 50px;
 }
 
-@media only screen and (max-width:399px) {
+.timeline-img {
+    width:350px;
+}
+
+/*
     #bbq-man {
-        height:auto;
+        width: 400px;
+    }
+    #uk-man {
+        width:325px;
+        margin-left:200px;
+    }
+    #canada-man {
+        width:500px;
+        margin-left:50px;
+    }
+
+
+    #french-man {
+        width: 500px;
+        margin-left: 50px;
+    }
+
+    .timeline-img {
+        width:350px;
+    }
+*/
+
+@media only screen and (orientation: landscape) and (max-width:1024px)  {
+    #bbq-man {
+    /*    height:auto;*/
         width:100%;
     }
     #uk-man {
-        height:auto;
+        /*height:auto;*/
         width:100%;
         margin-left:0px;
     }
     #canada-man {
-        height:auto;
+       /* height:auto;*/
         width:100%;
         margin-left:0px;
     }
 
     #french-man {
-        height: auto;
+        /*height: auto;*/
         width: 100%;
         margin-left: 0px;
+    }
+    .timeline-img {
+        width:100%;
+    }
+}
+
+@media only screen and (max-width: 400px) and (orientation: portrait) {
+    #bbq-man {
+        /*    height:auto;*/
+        width:100%;
+    }
+    #uk-man {
+        /*height:auto;*/
+        width:100%;
+        margin-left:0px;
+    }
+    #canada-man {
+        /* height:auto;*/
+        width:100%;
+        margin-left:0px;
+    }
+
+    #french-man {
+        /*height: auto;*/
+        width: 100%;
+        margin-left: 0px;
+    }
+    .timeline-img {
+        width:100%;
     }
 }
