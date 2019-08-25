@@ -9,18 +9,19 @@ $(document).ready(function () {
 
       if(typeof rsvpFormData.rsvpname === "undefined" || rsvpFormData.rsvpname === null || rsvpFormData.rsvpname === "") {
          $("#rsvp-info").html("Sorry - we'd like to know who you are - name is required");
-      }
+      } else {
 
-      $.ajax({
-         type: 'POST',
-         url: 'http://rosolynwedding.com:8080',
-         contentType: 'application/json; charset=utf-8',
-         dataType: 'html',
-         data: JSON.stringify(rsvpFormData)
-      }).done(function (data) {
-         console.log("done");
-         alert(data);
-           $( "#rsvp-form" ).html("Thank you " + data);
-      });
+         $.ajax({
+            type: 'POST',
+            url: 'http://rosolynwedding.com:8080',
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'html',
+            data: JSON.stringify(rsvpFormData)
+         }).done(function (data) {
+            console.log("done");
+            alert(data);
+            $("#rsvp-form").html("Thank you " + data);
+         });
+      }
    });
 });
