@@ -7,6 +7,10 @@ $(document).ready(function () {
       }, {});
       console.log(rsvpFormData);
 
+      if(typeof rsvpFormData.rsvpname === "undefined" || rsvpFormData.rsvpname === null || rsvpFormData.rsvpname === "") {
+         $("#rsvp-info").html("Sorry - we'd like to know who you are - name is required");
+      }
+
       $.ajax({
          type: 'POST',
          url: 'http://rosolynwedding.com:8080',

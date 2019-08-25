@@ -41,7 +41,7 @@
                 <div class="col-lg travel-blurb">
                     <div class="card">
                         <div>
-                            <img class="card-img-top direction-img" style="background-color: white" src="../static/images/Friday.jpg" alt="Card image">
+                            <img class="card-img-top direction-img timeline-img" style="background-color: white" src="../static/images/Friday.jpg" alt="Card image">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">Friday</h4>
@@ -53,7 +53,7 @@
                 <div class="col-lg travel-blurb">
                     <div class="card ">
                         <div>
-                            <img class="card-img-top direction-img" style="width:350px;" src="../static/images/Saturday.png" alt="Card image">
+                            <img class="card-img-top direction-img timeline-img" src="../static/images/Saturday.png" alt="Card image">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">Satruday</h4>
@@ -90,12 +90,11 @@
             </div>
             <div class="row">
                 <div class="col-lg" style="min-height:440px;">
-                    <iframe class="rounded-right rounded-left" width="100%" height="100%" frameborder="0" style="border:0"
+                    <iframe class="rounded-right rounded-left" width="100%" height="100%" frameborder="0" style="border:0; height:440px"
                             src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJWbIjZVIarRIR_WkmnuHhidc&key=AIzaSyC14ePrxBCOqEIJJIsAMZX357cbVEV_9BQ&zoom=5" allowfullscreen></iframe>
                 </div>
                 <div class="col-lg pt-3 pt-lg-0" id="beduer-col">
                     <div id="beduer">
-                        <h2>Bedeur</h2>
                         <div>
                         Located in the small village of Bedeur France, about a 15 minute drive from the town of Fijac.
                         <div class="row">
@@ -253,11 +252,15 @@
             <div class="section-header text-center">
                 <h1>RSVP</h1>
             </div>
+            <div id="rsvp-info">Please fill in the RSVP</div>
         <form id="rsvp-form" class="rounded-right rounded-left" >
             <div class="form-group col-6 offset-3">
                 <label for="rsvp-name">Names</label>
                 <input type="text" class="form-control" id="rsvp-name" name="rsvpname">
-
+            </div>
+            <div class="form-group col-6 offset-3">
+                <label for="rsvp-email">Email</label>
+                <input type="text" class="form-control" id="rsvp-email" name="rsvpemail">
             </div>
             <div class="form-group col-6  offset-3">
                 <label for="joiningfor">I'll be joining you for:</label>
@@ -266,6 +269,10 @@
                     <option selected for="saturday">Saturday Wedding</option>
                     <option for="sunday">Sunday BBQ</option>
                 </select>
+            </div>
+            <div class="form-group col-6 offset-3">
+                <label for="rsvp-constraint">Dietary Constraints</label>
+                <input type="text" class="form-control" id="rsvp-constraint" name="rsvpconstraint">
             </div>
             <div class="form-group col-6  offset-3" id="accomadation">
                 Would you like to use our sourced accomadation and stay at the Cheateau?
