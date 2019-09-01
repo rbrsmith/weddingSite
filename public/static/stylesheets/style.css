@@ -35,6 +35,7 @@ html, body {
     }
 }
 
+
 .slide-1{
     /* The image used */
     background-image: url("../images/wedding-2.jpg");
@@ -107,15 +108,13 @@ html, body {
 }
 
 #beduer-col {
-
+    height:100%;
+    margin:auto;
 }
 
 #info {
 }
 
-#beduer {
-    background-color: lavender;
-}
 
 #rsvp-form, #login-form {
     background-color: lavender;
@@ -255,6 +254,8 @@ html, body {
 }
 */
 
+/*
+>>>>>>> Layout Changes
 @media only screen and (orientation: landscape) {
     .travel-info-btn {
         display: none;
@@ -271,6 +272,12 @@ html, body {
     .travel-info-btn{
         display:block;
     }
+}
+<<<<<<< 1e58bca749b3cf70786594c7fc5fdf2616d9f709
+=======
+*/
+.more-info {
+    display: none;
 }
 
 .travel-info-btn {

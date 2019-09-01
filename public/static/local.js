@@ -37,6 +37,9 @@ const displayInfo = function(button, id) {
 
 };
 
+
+/*
+>>>>>>> Layout Changes
 $( window ).on( "orientationchange", function( event ) {
    const orientation = window.screen.orientation.type;
    if(orientation === 'landscape-primary') {
@@ -47,4 +50,5 @@ $( window ).on( "orientationchange", function( event ) {
       $(".more-info").hide();
 
    }
+<<<<<<< 1e58bca749b3cf70786594c7fc5fdf2616d9f709
 });
