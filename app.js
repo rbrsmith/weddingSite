@@ -1,12 +1,16 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+const session = require("express-session");
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mainRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var rsvpRouter = require('./routes/rsvp');
 var statusRouter = require('./routes/status');
+const redis = require('redis');
+const redisStore = require('connect-redis')(session);
+const client  = redis.createClient();
 
 var bodyParser = require('body-parser');
 
@@ -18,6 +22,14 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 app.use(express.urlencoded());
+app.use(session({
+  secret: "rsoolyn",
+  // create new redis store.
+  store: new redisStore({ host: 'localhost', port: 6379, client: client,ttl : 260}),
+  saveUninitialized: false,
+  resave: false
+}));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
