@@ -25,3 +25,26 @@ $(document).ready(function () {
       }
    });
 });
+const displayInfo = function(button, id) {
+   const btnText = $(button).text();
+   if(btnText.toLocaleLowerCase() === 'more info') {
+      $(id).show();
+      $(button).text("Hide");
+   } else {
+      $(id).hide();
+      $(button).text("More Info");
+   }
+
+};
+
+$( window ).on( "orientationchange", function( event ) {
+   const orientation = window.screen.orientation.type;
+   if(orientation === 'landscape-primary') {
+      $(".travel-info-btn").hide();
+      $(".more-info").show();
+   } else {
+      $(".travel-info-btn").show();
+      $(".more-info").hide();
+
+   }
+});
