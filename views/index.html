@@ -15,7 +15,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <title>Rosolyn Wedding</title>
+    <link rel='shortcut icon' href='../static/images/favicon.jpeg' type='image/x-icon' />
 </head>
 <body>
     <div class="App">
@@ -47,8 +48,13 @@
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">Friday</h4>
-                            <p class="card-text">Around 7pm we will be hosting an informal welcome dinner in the garden, where the village tavern will
+                            <em>Join us for a welcome pizza!</em><br/>
+                            <button type="button" class="btn btn-info travel-info-btn" id="more-info-pizza-btn"
+                                    onclick="displayInfo('#more-info-pizza-btn','#more-info-pizza')">More Info</button>
+                            <div class="more-info" id="more-info-pizza">
+                                <p class="card-text">Around 7pm we will be hosting an informal welcome dinner in the garden, where the village tavern will
                                 be providing pizzas and salads.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -59,25 +65,43 @@
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">Satruday</h4>
+                            <em>The main event - our wedding!</em><br/>
+                            <button type="button" class="btn btn-info travel-info-btn" id="more-info-wedding-btn"
+                                    onclick="displayInfo('#more-info-wedding-btn','#more-info-wedding')">More Info</button>
+                            <div class="more-info" id="more-info-wedding">
                             <p class="card-text">The ceremony will be held in the Chateau grounds and wills start at 4pm, please arrive for 3.30pm. Please
                                 feel free to take the opportunity to spend the morning and early afternoon relaxing at the pool and
                                 discovering the local area.<br/>
                                 <br/>
                                 The ceremony will be followed by canapes, the wedding breakfast and entertainment.<br/>
+<<<<<<< 1e58bca749b3cf70786594c7fc5fdf2616d9f709
                                 </p>
+=======
+                                <br/>
+                                The dress code is cocktail attire or dressy casual. Ladies – if wearing heels, please be aware that the
+                                ceremony will be on grass and dancing on gravel.
+                                </p>
+                            </div>
+>>>>>>> Layout Changes
                         </div>
                     </div>
                 </div>
                 <div class="col-sm travel-blurb">
                     <div class="card ">
                         <div>
-                            <img class="card-img-top direction-img" id="bbq-man" src="../static/images/bbq.svg" alt="Card image">
+                            <img class="card-img-top direction-img" id="bbq-man" src="../static/images/bbq_pig.svg" alt="Card image">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">Sunday</h4>
+                            <em>BBQ time!</em><br/>
+                            <button type="button" class="btn btn-info travel-info-btn" id="more-info-bbq-btn"
+                                    onclick="displayInfo('#more-info-bbq-btn','#more-info-bbq')">More Info</button>
+                            <div class="more-info" id="more-info-bbq">
                             <p class="card-text">The caterers will be coming back and providing a BBQ after midday for a relaxed afternoon in the sun. If
                                 the hangovers permits, we will organising a sports day so get practicing your egg and spoon skills!</p>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -94,23 +118,8 @@
                             src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJWbIjZVIarRIR_WkmnuHhidc&key=AIzaSyC14ePrxBCOqEIJJIsAMZX357cbVEV_9BQ&zoom=5" allowfullscreen></iframe>
                 </div>
                 <div class="col-lg pt-3 pt-lg-0" id="beduer-col">
-                    <div id="beduer">
-                        <div>
-                        Located in the small village of Bedeur France, about a 15 minute drive from the town of Fijac.
-                        <div class="row">
-                            <div class="col-4">
-                                <img class="img-thumbnail beduer-image" src=../static/images/beduer-1.jpg>
-                            </div>
-                            <div class="col-4">
-                                <img class="img-thumbnail beduer-image" src=../static/images/beduer-3.jpg>
-                                <img class="img-thumbnail beduer-image" src=../static/images/beduer-4.jpg>
-                            </div>
-                            <div class="col-4">
-                                <img class="img-thumbnail beduer-image" src=../static/images/beduer-2.jpg>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+                    Located in the small village of Bedeur France, about a 15 minute drive from the town of Fijac is the castle of Bedeur.  THe castle has been around for ages.
+
                 </div>
             </div>
         </div>
@@ -129,8 +138,7 @@
                         <div class="card-body">
                             <h4 class="card-title">England</h4>
                             <div class="card-text">
-                                <em>Most of the 2020 flights have not been released yet but based on summer 2019:</em><br/>
-                                <br/>
+                                <em>2020 flights have not been released yet but based on summer 2019:</em><br/>
                                 <button type="button" class="btn btn-info travel-info-btn" id="more-info-england-btn"
                                         onclick="displayInfo('#more-info-england-btn','#more-info-england')">More Info</button>
                                 <div class="more-info" id="more-info-england">
@@ -194,7 +202,6 @@
                                 <button type="button" class="btn btn-info travel-info-btn" id="more-info-france-btn"
                                         onclick="displayInfo('#more-info-france-btn','#more-info-france')">More Info</button>
                                 <div class="more-info" id="more-info-france">
-                                    <br/>
                                     <strong>Trains from Brive:</strong><br/>
                                     Direct trains to Figeac take an hour 15 mins.<br/>
                                     Figeac is 15 mins drivr to Beduer<br/>
@@ -209,7 +216,6 @@
                                     <strong>Trains from Toulouse:</strong><br/>
                                     Direct trains to Capendac (2 hrs 15 mins) which is 15 mins to Beduer
                             </div>
-                        </p>
                      </div>
                 </div>
             </div>
@@ -223,24 +229,7 @@
                 <h1>Where can I stay?</h1>
             </div>
             <div class="row">
-                <div class="col-lg pt-3 pt-lg-0" id="sleeping-col">
-                    <div id="castleAccomadation">
-                        <div>
-                            <div class="row">
-                                <div class="col-md">
-                                    <img class="img-thumbnail beduer-image" src=../static/images/bedroom-1.png>
-                                </div>
-                                <div class="col-md">
-                                    <img class="img-thumbnail beduer-image" src=../static/images/bedroom-3.png>
-                                </div>
-                                <div class="col-md">
-                                    <img class="img-thumbnail beduer-image" src=../static/images/bedroom-2.jpg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg">
+                <div class="col-lg" style="margin-top:auto; margin-bottom:auto">
 
                     To allow our friends and family to share the
                     weekend festivities, we have secured enough
@@ -261,6 +250,23 @@
                     If you would prefer to source your own
                     accommodation, the town of Figeac is 15
                     minutes drive away.
+                </div>
+                <div class="col-lg pt-3 pt-lg-0" id="sleeping-col">
+                    <div id="castleAccomadation">
+                        <div>
+                            <div class="row">
+                                <div class="col-xs" style="margin:auto;">
+                                    <img class="img-thumbnail beduer-image" src=../static/images/bedroom-1.png>
+                                </div>
+                                <div class="col-xs" style="margin:auto;">
+                                    <img class="img-thumbnail beduer-image" src=../static/images/bedroom-3.png>
+                                </div>
+                                <div class="col-xs" style="margin:auto;">
+                                    <img class="img-thumbnail beduer-image" src=../static/images/bedroom-2.jpg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
