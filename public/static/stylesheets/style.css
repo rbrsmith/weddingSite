@@ -162,6 +162,7 @@ html, body {
     background-image: linear-gradient(90deg, #000, transparent);
 }
 
+/*
 #bbq-man {
     width: 400px;
 }
@@ -183,7 +184,7 @@ html, body {
 .timeline-img {
     width:350px;
 }
-
+*/
 /*
     #bbq-man {
         width: 400px;
@@ -207,25 +208,21 @@ html, body {
         width:350px;
     }
 */
-
+/*
 @media only screen and (orientation: landscape) and (max-width:1024px)  {
     #bbq-man {
-    /*    height:auto;*/
         width:100%;
     }
     #uk-man {
-        /*height:auto;*/
         width:100%;
         margin-left:0px;
     }
     #canada-man {
-       /* height:auto;*/
         width:100%;
         margin-left:0px;
     }
 
     #french-man {
-        /*height: auto;*/
         width: 100%;
         margin-left: 0px;
     }
@@ -233,29 +230,50 @@ html, body {
         width:100%;
     }
 }
-
+*/
+/*
 @media only screen and (max-width: 400px) and (orientation: portrait) {
     #bbq-man {
-        /*    height:auto;*/
         width:100%;
     }
     #uk-man {
-        /*height:auto;*/
         width:100%;
         margin-left:0px;
     }
     #canada-man {
-        /* height:auto;*/
         width:100%;
         margin-left:0px;
     }
 
     #french-man {
-        /*height: auto;*/
         width: 100%;
         margin-left: 0px;
     }
     .timeline-img {
         width:100%;
     }
+}
+*/
+
+@media only screen and (orientation: landscape) {
+    .travel-info-btn {
+        display: none;
+    }
+    .more-info {
+        display:block;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    .more-info {
+        display: none;
+    }
+    .travel-info-btn{
+        display:block;
+    }
+}
+
+.travel-info-btn {
+    margin: auto;
+
 }

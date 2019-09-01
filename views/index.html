@@ -29,7 +29,9 @@
             </div>
             We are getting married in the Chateau de Beduer, a little village in Lot, France on Saturday 27th June 2020 and would
             love for you to join us! <br/><br/>From Friday to Monday we have the exclusive use for the Chateau, grounds and Gites for the
-            wedding and the weekend festivities.
+            wedding and the weekend festivities.<br/><br/>
+            The dress code is cocktail attire or dressy casual. Ladies – if wearing heels, please be aware that the
+            ceremony will be on grass and dancing on gravel.
         </div>
 
         <div class="divider"><span></span><span>♥</span><span></span></div>
@@ -38,10 +40,10 @@
                 <h1>So what is happening?</h1>
             </div>
             <div class="row">
-                <div class="col-lg travel-blurb">
+                <div class="col-sm travel-blurb">
                     <div class="card">
                         <div>
-                            <img class="card-img-top direction-img timeline-img" style="background-color: white" src="../static/images/Friday.jpg" alt="Card image">
+                            <img class="card-img-top direction-img timeline-img" style="background-color: white" src="../static/images/pizza.svg" alt="Card image">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">Friday</h4>
@@ -50,10 +52,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg travel-blurb">
+                <div class="col-sm travel-blurb">
                     <div class="card ">
                         <div>
-                            <img class="card-img-top direction-img timeline-img" src="../static/images/Saturday.png" alt="Card image">
+                            <img class="card-img-top direction-img timeline-img" src="../static/images/wedding.svg" alt="Card image">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">Satruday</h4>
@@ -62,16 +64,14 @@
                                 discovering the local area.<br/>
                                 <br/>
                                 The ceremony will be followed by canapes, the wedding breakfast and entertainment.<br/>
-                                <br/>
-                                The dress code is cocktail attire or dressy casual. Ladies – if wearing heels, please be aware that the
-                                ceremony will be on grass and dancing on gravel.</p>
+                                </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg travel-blurb">
+                <div class="col-sm travel-blurb">
                     <div class="card ">
                         <div>
-                            <img class="card-img-top direction-img" id="bbq-man" src="../static/images/sunday.jpg" alt="Card image">
+                            <img class="card-img-top direction-img" id="bbq-man" src="../static/images/bbq.svg" alt="Card image">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">Sunday</h4>
@@ -90,7 +90,7 @@
             </div>
             <div class="row">
                 <div class="col-lg" style="min-height:440px;">
-                    <iframe class="rounded-right rounded-left" width="100%" height="100%" frameborder="0" style="border:0; height:440px"
+                    <iframe class="rounded-right rounded-left" width="100%" height="100%" frameborder="0" style="border:0; min-height:440px"
                             src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJWbIjZVIarRIR_WkmnuHhidc&key=AIzaSyC14ePrxBCOqEIJJIsAMZX357cbVEV_9BQ&zoom=5" allowfullscreen></iframe>
                 </div>
                 <div class="col-lg pt-3 pt-lg-0" id="beduer-col">
@@ -121,81 +121,99 @@
                 <h1>How do I get there from ...</h1>
             </div>
             <div class="row">
-                <div class="col-lg travel-blurb">
+                <div class="col-sm travel-blurb">
                     <div class="card">
                         <div>
-                            <img id="uk-man" class="card-img-top direction-img" src="../static/images/england.jpg" alt="Card image" >
+                            <img id="uk-man" class="card-img-top direction-img" src="../static/images/england.svg" alt="Card image" >
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">England</h4>
-                            <p class="card-text"><em>Most of the 2020 flights have not been released yet but based on summer 2019:</em><br/>
+                            <div class="card-text">
+                                <em>Most of the 2020 flights have not been released yet but based on summer 2019:</em><br/>
                                 <br/>
-                                <strong>Brive (1 hr drive):</strong><br/>
-                                Stansted - Ryanair flies 2 times a week<br/>
-                                <br/>
-                                <strong>Rodez (1 hr drive):</strong><br/>
-                                Stansted - Ryanair flies 2 times a week<br/>
-                                <br/>
-                                <strong>Toulouse (1 hr 50 drive):</strong><br/>
-                                Stansted, Gatwick, Heathrow & Luton – daily flights<br/>
-                                Manchester - Flybe flies 5 days a week<br/>
-                                <br/>
-                                <strong>Limoges (2 hr drive):</strong><br/>
-                                Leeds & Manchester – Ryanair flies 2/3 days Stansted – daily flights<br/>
-                                <br/>
-                                <strong>Bergerac (2 hr 20 drive):</strong><br/>
-                                Leeds/Bradford – Jet2 flies 1-2 times a week<br/>
-                                <br/>
-                                <strong>Bordeaux (3 hr drive):</strong><br/>
-                                Manchester – Ryanair & Easyjet flies 2 times a week<br/>
-                                Stansted, Gatwick, Heathrow & Luton – daily flights</p>
+                                <button type="button" class="btn btn-info travel-info-btn" id="more-info-england-btn"
+                                        onclick="displayInfo('#more-info-england-btn','#more-info-england')">More Info</button>
+                                <div class="more-info" id="more-info-england">
+                                    <strong>Brive (1 hr drive):</strong><br/>
+                                    Stansted - Ryanair flies 2 times a week<br/>
+                                    <br/>
+                                    <strong>Rodez (1 hr drive):</strong><br/>
+                                    Stansted - Ryanair flies 2 times a week<br/>
+                                    <br/>
+                                    <strong>Toulouse (1 hr 50 drive):</strong><br/>
+                                    Stansted, Gatwick, Heathrow & Luton – daily flights<br/>
+                                    Manchester - Flybe flies 5 days a week<br/>
+                                    <br/>
+                                    <strong>Limoges (2 hr drive):</strong><br/>
+                                    Leeds & Manchester – Ryanair flies 2/3 days Stansted – daily flights<br/>
+                                    <br/>
+                                    <strong>Bergerac (2 hr 20 drive):</strong><br/>
+                                    Leeds/Bradford – Jet2 flies 1-2 times a week<br/>
+                                    <br/>
+                                    <strong>Bordeaux (3 hr drive):</strong><br/>
+                                    Manchester – Ryanair & Easyjet flies 2 times a week<br/>
+                                    Stansted, Gatwick, Heathrow & Luton – daily flights</p>
+                                </div>
+                            </div>
                         </div>
                      </div>
                 </div>
-                <div class="col-lg travel-blurb">
+                <div class="col-sm travel-blurb">
                     <div class="card ">
-                        <img id="canada-man" class="card-img-top direction-img" src="../static/images/canada.jpg" alt="Card image">
+                        <img id="canada-man" class="card-img-top direction-img" src="../static/images/canada.svg" alt="Card image">
                         <div class="card-body">
                             <h4 class="card-title">Canada</h4>
-                            <p class="card-text"><em>Flights from Montreal to Europe are already released for June 2020!</em><br/>
-                                <br/>
-                                <strong>Paris CDG (Train, 5 hr drive or internal flight):</strong><br/>
-                                Daily direct flights<br/>
-                                Air Transat seems the cheapest<br/>
-                                <br/>
-                                <strong>Toulouse (2 hr drive):</strong><br/>
-                                Direct flights with Air Transat 4 times a week<br/>
-                                <br/>
-                                <strong>Bordeaux (3 hr drive):</strong><br/>
-                                Direct flights with Air Transat 4 times a week</p>
+                            <div class="card-text"><em>Flights from Montreal to Europe are already released for June 2020!</em><br/>
+                                <button type="button" class="btn btn-info travel-info-btn" id="more-info-canada-btn"
+                                        onclick="displayInfo('#more-info-canada-btn','#more-info-canada')">More Info</button>
+                                <div class="more-info" id="more-info-canada">
+                                    <br/>
+                                    <strong>Paris CDG (Train, 5 hr drive or internal flight):</strong><br/>
+                                    Daily direct flights<br/>
+                                    Air Transat seems the cheapest<br/>
+                                    <br/>
+                                    <strong>Toulouse (2 hr drive):</strong><br/>
+                                    Direct flights with Air Transat 4 times a week<br/>
+                                    <br/>
+                                    <strong>Bordeaux (3 hr drive):</strong><br/>
+                                    Direct flights with Air Transat 4 times a week
+                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg travel-blurb">
+                <div class="col-sm travel-blurb">
                     <div class="card ">
                         <div>
-                            <img id="french-man" class="card-img-top direction-img" src="../static/images/france.jpg" alt="Card image">
+                            <img id="french-man" class="card-img-top direction-img" src="../static/images/france.svg" alt="Card image">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">France</h4>
-                            <p class="card-text"><em>Below is some information on trains in the area and local flights.</em><br/>
-                                <br/>
-                                <strong>Trains from Brive:</strong><br/>
-                                Direct trains to Figeac take an hour 15 mins.<br/>
-                                Figeac is 15 mins drivr to Beduer<br/>
-                                <br/>
-                                <strong>Trains from Paris:</strong><br/>
-                                Direct trains to Brive takes 4-5hrs<br/>
-                                Trains to Figeac require a change at Brive. Figeac is 15 mins driv3 to Beduer<br/>
-                                <br/>
-                                <strong>Internal flights from Paris:</strong><br/>
-                                Multiple flights a day to Brive & Rodez both which are an hour drive to Beduer<br/>
-                                <br/>
-                                <strong>Trains from Toulouse:</strong><br/>
-                                Direct trains to Capendac (2 hrs 15 mins) which is 15 mins to Beduer</p>
-                        </div>
+                            <div class="card-text"><em>Below is some information on trains in the area and local flights.</em><br/>
+
+                                <button type="button" class="btn btn-info travel-info-btn" id="more-info-france-btn"
+                                        onclick="displayInfo('#more-info-france-btn','#more-info-france')">More Info</button>
+                                <div class="more-info" id="more-info-france">
+                                    <br/>
+                                    <strong>Trains from Brive:</strong><br/>
+                                    Direct trains to Figeac take an hour 15 mins.<br/>
+                                    Figeac is 15 mins drivr to Beduer<br/>
+                                    <br/>
+                                    <strong>Trains from Paris:</strong><br/>
+                                    Direct trains to Brive takes 4-5hrs<br/>
+                                    Trains to Figeac require a change at Brive. Figeac is 15 mins driv3 to Beduer<br/>
+                                    <br/>
+                                    <strong>Internal flights from Paris:</strong><br/>
+                                    Multiple flights a day to Brive & Rodez both which are an hour drive to Beduer<br/>
+                                    <br/>
+                                    <strong>Trains from Toulouse:</strong><br/>
+                                    Direct trains to Capendac (2 hrs 15 mins) which is 15 mins to Beduer
+                            </div>
+                        </p>
                      </div>
                 </div>
+            </div>
+        </div>
             </div>
         </div>
 
@@ -209,13 +227,13 @@
                     <div id="castleAccomadation">
                         <div>
                             <div class="row">
-                                <div class="col-4">
+                                <div class="col-md">
                                     <img class="img-thumbnail beduer-image" src=../static/images/bedroom-1.png>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-md">
                                     <img class="img-thumbnail beduer-image" src=../static/images/bedroom-3.png>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-md">
                                     <img class="img-thumbnail beduer-image" src=../static/images/bedroom-2.jpg>
                                 </div>
                             </div>
