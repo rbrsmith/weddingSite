@@ -38,26 +38,25 @@ html, body {
 
 .slide-1{
     /* The image used */
-    background-image: url("../images/wedding-2.jpg");
+    background-image: url("../images/Saturday1.jpeg");
 
 }
 
 .slide-2{
     /* The image used */
-    background-image: url("../images/wedding-3.jpg");
+    background-image: url("../images/ending.jpeg");
 
 }
 
 .slide-3{
     /* The image used */
-    background-image: url("../images/main.jpeg");
+    background-image: url("../images/mainPhoto1.jpeg");
 
 }
 
 .slide-4{
     /* The image used */
     background-image: url("../images/wedding-5.jpg");
-
 }
 
 #welcome {
