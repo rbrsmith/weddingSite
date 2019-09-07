@@ -2,7 +2,7 @@ var express = require('express');
 const bcrypt = require('bcrypt');
 var router = express.Router();
 
-const pwdHash = '$2b$10$LdDSPZpMeaSDZA8XL4zzQOmz00hQgmqQcpnU5oK24Q8uqNtyQQjMm';
+const pwdHash = '$2b$10$Q4vqTnoUnINra/fEQio3zepBpBgKve04o8cbT5Erc5t1mzY6V/UQy';
 
 /* GET home page. */
 router.post('/', function(req, res, next) {
@@ -11,6 +11,11 @@ router.post('/', function(req, res, next) {
   if(typeof req.body.pwd !== 'undefined') {
 
       req.session.pwd = req.body.pwd;
+
+    bcrypt.hash("Rosolyn", 10, function(err, hash) {
+        console.log(hash);
+    })
+
 
       bcrypt.compare(req.session.pwd, pwdHash, function(err, result) {
         if(result) {
