@@ -48,6 +48,12 @@ html, body {
 
 }
 
+
+.slide-login{
+    /* The image used */
+    background-image: url("../images/wedding-5.jpg");
+}
+
 .slide-3{
     /* The image used */
     background-image: url("../images/mainPhoto1.jpeg");
@@ -56,7 +62,7 @@ html, body {
 
 .slide-4{
     /* The image used */
-    background-image: url("../images/wedding-5.jpg");
+    background-image: url("../images/wedding-3.jpg");
 }
 
 #welcome {
