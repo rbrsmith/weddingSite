@@ -44,7 +44,7 @@ html, body {
 
 .slide-2{
     /* The image used */
-    background-image: url("../images/wedding-4.jpg");
+    background-image: url("../images/wedding-3.jpg");
 
 }
 
@@ -108,7 +108,6 @@ html, body {
 }
 
 #beduer-col {
-    height:100%;
     margin:auto;
 }
 

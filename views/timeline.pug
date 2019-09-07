@@ -1,0 +1,57 @@
+div(class="container-fluid" id="timeline")
+    div(class="section-header text-center")
+        h1 So what is happening?
+    div(class="row")
+        div(class="col-sm travel-blurb")
+            div(class="card")
+                div
+                    img(class="card-img-top direction-img timeline-img" style="background-color: white" src="/static/images/pizza.svg" alt="Card image")
+                div(class="card-body")
+                    h4(class="card-title") Friday
+                    em Join us for a welcome pizza!
+                    br
+
+                    button(type="button" class="btn btn-info travel-info-btn" id="more-info-pizza-btn" onclick="displayInfo('#more-info-pizza-btn','#more-info-pizza')") More Info
+
+                    div(class="more-info" id="more-info-pizza")
+                        p(class="card-text") Around 7pm we will be hosting an informal welcome dinner in the garden, where the village tavern will be providing pizzas and salads.
+
+        div(class="col-sm travel-blurb")
+            div(class="card")
+                div
+                    img(class="card-img-top direction-img timeline-img" src="/static/images/wedding.svg" alt="Card image")
+                div(class="card-body")
+                    h4(class="card-title") Satruday
+                    em The main event - our wedding!
+                    br
+
+
+                    button(type="button" class="btn btn-info travel-info-btn" id="more-info-wedding-btn" onclick="displayInfo('#more-info-wedding-btn','#more-info-wedding')") More Info
+
+                    div(class="more-info" id="more-info-wedding")
+                        p(class="card-text") The ceremony will be held in the Chateau grounds and wills start at 4pm, please arrive for 3.30pm. Please feel free to take the opportunity to spend the morning and early afternoon relaxing at the pool andd iscovering the local area.
+                            br
+                            br
+                            | The ceremony will be followed by canapes, the wedding breakfast and entertainment.
+                            br
+                            br
+                            | The dress code is cocktail attire or dressy casual. Ladies – if wearing heels, please be aware that the ceremony will be on grass and dancing on gravel.
+
+
+        div(class="col-sm travel-blurb")
+            div(class="card")
+                div
+                    img(class="card-img-top direction-img" id="bbq-man" src="static/images/bbq_pig.svg" alt="Card image")
+
+                div(class="card-body")
+                    h4(class="card-title") Sunday
+                    em BBQ time!
+                    br
+
+                    button(type="button" class="btn btn-info travel-info-btn" id="more-info-bbq-btn" onclick="displayInfo('#more-info-bbq-btn','#more-info-bbq')") More Info
+
+                    div(class="more-info" id="more-info-bbq")
+                        p(class="card-text") The caterers will be coming back and providing a BBQ after midday for a relaxed afternoon in the sun. If the hangovers permits, we will organising a sports day so get practicing your egg and spoon skills!
+
+
+
