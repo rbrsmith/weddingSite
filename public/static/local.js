@@ -2,9 +2,16 @@ $(document).ready(function () {
    $("#rsvp-form").submit(function (e) {
       e.preventDefault(); //prevent default form submit
       var rsvpFormData = $('#rsvp-form').serializeArray().reduce(function (obj, item) {
-         obj[item.name] = item.value;
+         if(item.name === "joiningfor" && obj[item.name] !== undefined) {
+            const currentJoiningFor = obj[item.name];
+            obj[item.name] = currentJoiningFor + " & " + item.value;
+         } else {
+            obj[item.name] = item.value;
+         }
          return obj;
+
       }, {});
+      console.log("RSVP FORM DATA:" )
       console.log(rsvpFormData);
 
       if(typeof rsvpFormData.rsvpname === "undefined" || rsvpFormData.rsvpname === null || rsvpFormData.rsvpname === "") {
