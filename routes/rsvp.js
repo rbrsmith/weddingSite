@@ -2,12 +2,17 @@ var express = require('express');
 const mongo = require('mongodb').MongoClient
 var router = express.Router();
 
-console.log("rsvp");
 
-router.get("/", function(req, res, next) {
-   console.log("here");
-   console.log(req.session.pwd);
+router.post("/", function(req, res, next) {
+   console.log("Setting session name" + req.body.name);
 
+   req.session.name = req.body.name;
+
+   res.end(JSON.stringify({
+      status:"success"
+   }));
+
+//    res.sendFile("rsvp.html", {root: "./views/"});
 });
 //
 // const url = 'mongodb://localhost:27017'

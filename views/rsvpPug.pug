@@ -1,0 +1,39 @@
+div(class="container-fluid" id="rsvp")
+    div(class="section-header text-center")
+        h1 RSVP
+
+    div(id="rsvp-info") Please fill in the RSVP
+
+    form(id="rsvp-form" class="rounded-right rounded-left")
+        div(class="form-group col-6 offset-3")
+            label(for="rsvp-name") Names
+            input(type="text" class="form-control" id="rsvp-name" name="rsvpname")
+
+        div(class="form-group col-6 offset-3")
+            label(for="rsvp-email") Email
+            input(type="text" class="form-control" id="rsvp-email" name="rsvpemail")
+
+        div(class="form-group col-6  offset-3")
+            label(for="joiningfor") I'll be joining you for:
+            select(multiple class="form-control" id="joiningfor" name="joiningfor")
+                option(for="firday") Friday Night Pizzas
+                option(selected for="saturday") Saturday Wedding
+                option(for="sunday") Sunday BBQ
+
+        div(class="form-group col-6 offset-3")
+            label(for="rsvp-constraint") Dietary Constraints
+            input(type="text" class="form-control" id="rsvp-constraint" name="rsvpconstraint")
+
+        div(class="form-group col-6  offset-3" id="accomadation")
+            | Would you like to use our sourced accomadation and stay at the Cheateau?
+            div(class="form-check")
+                input(class="form-check-input" type="radio" name="accomadation" id="yesaccomadate" value="yesaccomadate" checked)
+                label(class="form-check-label" for="yesaccomadate")
+                    | Yes
+
+            div(class="form-check")
+                input(class="form-check-input" type="radio" name="accomadation" id="noaccomadate" value="noaccomadate")
+                label(class="form-check-label" for="noaccomadate")
+                    | No
+
+        button(class="btn btn-primary") Submit

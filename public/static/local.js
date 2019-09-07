@@ -19,12 +19,15 @@ $(document).ready(function () {
             data: JSON.stringify(rsvpFormData)
          }).done(function (data) {
             console.log("done");
-            alert(data);
-            $("#rsvp-form").html("Thank you " + data);
+            setCookie(data);
          });
+
+         setCookie(rsvpFormData.rsvpname);
+
       }
    });
 });
+
 const displayInfo = function(button, id) {
    const btnText = $(button).text();
    if(btnText.toLocaleLowerCase() === 'more info') {
@@ -36,3 +39,22 @@ const displayInfo = function(button, id) {
    }
 
 };
+const setCookie = function(name) {
+   const nameData = {
+      name: name
+   };
+
+   $.ajax({
+      type: 'POST',
+      url: 'http://rosolynwedding.com:3000/rsvp',
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'html',
+      data: JSON.stringify(nameData)
+   }).done(function (data) {
+      console.log(data);
+      const d = JSON.parse(data);
+      $("#rsvp").html("Thanks " + name + " for your RSVP");
+
+   });
+}
+
