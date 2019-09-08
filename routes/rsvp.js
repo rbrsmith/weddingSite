@@ -8,6 +8,8 @@ router.post("/", function(req, res, next) {
 
    req.session.name = req.body.name;
 
+   res.header("Access-Control-Allow-Origin", "*");
+
    res.end(JSON.stringify({
       status:"success"
    }));
