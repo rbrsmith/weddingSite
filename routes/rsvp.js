@@ -8,8 +8,15 @@ router.post("/", function(req, res, next) {
 
    req.session.name = req.body.name;
 
-   res.header("Access-Control-Allow-Origin", "*");
+   var allowedOrigins = ['http://rosolynwedding.com:3000', 'http://www.rosolywedding.com:3000'];
 
+   var origin = req.headers.origin;
+   console.log("oring: " + origin);
+
+   if(allowedOrigins.indexOf(origin) > -1){
+      console.log("Setting header");
+      res.setHeader('Access-Control-Allow-Origin', origin);
+   }
    res.end(JSON.stringify({
       status:"success"
    }));
