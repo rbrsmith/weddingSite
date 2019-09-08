@@ -8,7 +8,7 @@ router.post("/", function(req, res, next) {
 
    req.session.name = req.body.name;
 
-   var allowedOrigins = ['http://rosolynwedding.com:3000', 'http://www.rosolywedding.com:3000'];
+   var allowedOrigins = ['http://rosolynwedding.com:3000', 'http://www.rosolynwedding.com:3000'];
 
    var origin = req.headers.origin;
    console.log("oring: " + origin);
@@ -17,7 +17,11 @@ router.post("/", function(req, res, next) {
       console.log("Setting header");
       res.setHeader('Access-Control-Allow-Origin', origin);
    }
+<<<<<<< 8dd77d262673b2723cb90a684235d7fb2a91e204
    res.end(JSON.stringify({
+=======
+   res.send(JSON.stringify({
+>>>>>>> CORS
       status:"success"
    }));
 
