@@ -12,9 +12,6 @@ router.post('/', function(req, res, next) {
 
       req.session.pwd = req.body.pwd;
 
-    bcrypt.hash("Rosolyn", 10, function(err, hash) {
-        console.log(hash);
-    })
 
 
       bcrypt.compare(req.session.pwd, pwdHash, function(err, result) {
