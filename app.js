@@ -56,6 +56,15 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+
+app.get('/*', function(req, res, next) {
+  if (req.headers.host.match(/^www/) !== null ) {
+    res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
+  } else {
+    next();
+  }
+});
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
