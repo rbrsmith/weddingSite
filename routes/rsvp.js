@@ -17,6 +17,7 @@ router.post("/", function(req, res, next) {
       console.log("Setting header");
       res.setHeader('Access-Control-Allow-Origin', origin);
    }
+
    res.send(JSON.stringify({
       status:"success"
    }));
