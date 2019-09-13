@@ -16,6 +16,10 @@ router.options("/", function(req, res, next) {
       res.setHeader('Access-Control-Allow-Origin', origin);
    }
 
+   res.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
+   res.setHeader("Access-Control-Allow-Headers", "X-PINGOTHER, Content-Type");
+   res.setHeader("Access-Control-Max-Age", "86400");
+
    res.send(JSON.stringify({
       status:"success"
    }));
