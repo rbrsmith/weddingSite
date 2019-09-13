@@ -3,13 +3,32 @@ const mongo = require('mongodb').MongoClient
 var router = express.Router();
 
 
+router.options("/", function(req, res, next) {
+   console.log("Setting session name" + req.body.name);
+
+   req.session.name = req.body.name;
+   var allowedOrigins = ['http://rosolynwedding.com:3000', 'http://www.rosolynwedding.com:3000'];
+   var origin = req.headers.origin;
+   console.log("oring: " + origin);
+
+   if(allowedOrigins.indexOf(origin) > -1){
+      console.log("Setting header");
+      res.setHeader('Access-Control-Allow-Origin', origin);
+   }
+
+   res.send(JSON.stringify({
+      status:"success"
+   }));
+
+//    res.sendFile("rsvp.html", {root: "./views/"});
+});
+
+
 router.post("/", function(req, res, next) {
    console.log("Setting session name" + req.body.name);
 
    req.session.name = req.body.name;
-
    var allowedOrigins = ['http://rosolynwedding.com:3000', 'http://www.rosolynwedding.com:3000'];
-
    var origin = req.headers.origin;
    console.log("oring: " + origin);
 
