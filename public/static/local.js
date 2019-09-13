@@ -59,7 +59,6 @@ const setCookie = function(name) {
       data: JSON.stringify(nameData)
    }).done(function (data) {
       console.log(data);
-      const d = JSON.parse(data);
       $("#rsvp").html("Thanks " + name + " for your RSVP");
 
    });
