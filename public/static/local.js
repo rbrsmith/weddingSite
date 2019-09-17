@@ -33,6 +33,11 @@ $(document).ready(function () {
 
       }
    });
+
+   $("#rsvp-quick-link").click(function(e) {
+      const element = document.getElementById('rsvp-form');
+      element.scrollIntoView();
+   });
 });
 
 const displayInfo = function(button, id) {
@@ -44,8 +49,8 @@ const displayInfo = function(button, id) {
       $(id).hide();
       $(button).text("More Info");
    }
-
 };
+
 const setCookie = function(name) {
    const nameData = {
       name: name
