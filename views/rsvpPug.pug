@@ -14,11 +14,19 @@ div(class="container-fluid" id="rsvp")
             input(type="text" class="form-control" id="rsvp-email" name="rsvpemail")
 
         div(class="form-group col-6  offset-3")
-            label(for="joiningfor") I'll be joining you for:
-            select(multiple class="form-control" id="joiningfor" name="joiningfor")
-                option(for="firday") Friday Night Pizzas
-                option(selected for="saturday") Saturday Wedding
-                option(for="sunday") Sunday BBQ
+            span I'll be joining you for:
+            br
+            div(class="custom-control custom-checkbox")
+                input(type="checkbox" class="custom-control-input" id="friday")
+                label(class="custom-control-label" for="friday") Friday night Pizzas
+            div(class="custom-control custom-checkbox")
+                input(type="checkbox" class="custom-control-input" id="saturday" "checked")
+                label(class="custom-control-label" for="saturday") Saturday Cereomony
+            div(class="custom-control custom-checkbox")
+                input(type="checkbox" class="custom-control-input" id="sunday")
+                label(class="custom-control-label" for="sunday") Sunday BBQ
+
+
 
         div(class="form-group col-6 offset-3")
             label(for="rsvp-constraint") Dietary Constraints
