@@ -1,18 +1,38 @@
 $(document).ready(function () {
    $("#rsvp-form").submit(function (e) {
       e.preventDefault(); //prevent default form submit
-      var rsvpFormData = $('#rsvp-form').serializeArray().reduce(function (obj, item) {
-         if(item.name === "joiningfor" && obj[item.name] !== undefined) {
-            const currentJoiningFor = obj[item.name];
-            obj[item.name] = currentJoiningFor + " & " + item.value;
-         } else {
-            obj[item.name] = item.value;
-         }
-         return obj;
+      var rsvpFormData = $("#rsvp-form").serializeArray();
+      // var rsvpFormData = $('#rsvp-form').serializeArray().reduce(function (obj, item) {
+      //    if(item.name === "joiningfor" && obj[item.name] !== undefined) {
+      //       const currentJoiningFor = obj[item.name];
+      //       obj[item.name] = currentJoiningFor + " & " + item.value;
+      //    } else {
+      //       obj[item.name] = item.value;
+      //    }
+      //    return obj;
+      //
+      // }, {});
 
-      }, {});
-      console.log("RSVP FORM DATA:" )
+      var joiningFor = {name:"joiningfor"};
+
+      var joiningForValue = "";
+      if($("#friday").prop("checked") === true) {
+         joiningForValue += "Friday ";
+      }
+      if($("#saturday").prop("checked") === true) {
+         joiningForValue += "Saturday ";
+      }
+      if($("#sunday").prop("checked") === true) {
+         joiningForValue += "Sunday";
+      }
+
+      joiningFor.value = joiningForValue;
+      rsvpFormData.push(joiningFor);
+
+      console.log("RSVP FORM DATA");
       console.log(rsvpFormData);
+
+
 
       if(typeof rsvpFormData.rsvpname === "undefined" || rsvpFormData.rsvpname === null || rsvpFormData.rsvpname === "") {
          $("#rsvp-info").html("Sorry - we'd like to know who you are - name is required");
