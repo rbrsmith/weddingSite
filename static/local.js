@@ -24,6 +24,10 @@ $(document).ready(function () {
          });
       }
    });
+
+   $("#rsvp-quick-link").click(function(e) {
+      $(#rsvp-form).scrollIntoView();
+   });
 });
 const displayInfo = function(button, id) {
    const btnText = $(button).text();
@@ -48,3 +52,4 @@ $( window ).on( "orientationchange", function( event ) {
 
    }
 });
+
