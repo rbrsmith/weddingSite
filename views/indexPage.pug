@@ -1,60 +1,49 @@
-html
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
-    script(src='/static/local.js')
-    link(rel="stylesheet" href="/static/stylesheets/style.css")
+include header.pug
+div(class="App")
+    div(class="parallax slide-3")
+        include welcomeImg.pug
 
-    head
-        title Rosolyn Wedding
-        link(rel='shortcut icon' href='../static/images/favicon.jpeg' type='image/x-icon')
-    body
-        div(class="App")
-            div(class="parallax slide-3")
-                img(id="welcome" src="/static/images/welcome.svg")
+    div(class="content-text" id="info")
+        div(class="section-header text-center")
+            include welcome.pug
 
-            div(class="content-text" id="info")
-                div(class="section-header text-center")
-                    h1 Welcome to our wedding site
+        | We are getting married in the Chateau de Beduer, a little village in Lot, France on Saturday 27th June 2020 and would love for you to join us!
+        br
+        br
+        | From Friday to Monday we have the exclusive use for the Chateau, grounds and Gites for the wedding and the weekend festivities.
+        br
+        br
+        button(class="btn btn-info btn-large" id="rsvp-quick-link") RSVP NOW
+    include divider.pug
 
-                | We are getting married in the Chateau de Beduer, a little village in Lot, France on Saturday 27th June 2020 and would love for you to join us!
-                br
-                br
-                | From Friday to Monday we have the exclusive use for the Chateau, grounds and Gites for the wedding and the weekend festivities.
-                br
-                br
-                button(class="btn btn-info btn-large" id="rsvp-quick-link") RSVP NOW
-            include divider.pug
+    include timeline.pug
 
-            include timeline.pug
+    div(class="parallax slide-4")
 
-            div(class="parallax slide-4")
+    include divider.pug
 
-            include divider.pug
+    include where.pug
 
-            include where.pug
+    include divider.pug
 
-            include divider.pug
+    include directions.pug
 
-            include directions.pug
+    div(class="parallax slide-1")
 
-            div(class="parallax slide-1")
+    include divider.pug
 
-            include divider.pug
+    include sleeping.pug
 
-            include sleeping.pug
+    include divider.pug
 
-            include divider.pug
+    if name
+        | Thanks #{name} for your RSVP
+    else
+        include rsvpPug.pug
 
-            if name
-                | Thanks #{name} for your RSVP
-            else
-                include rsvpPug.pug
+    include divider.pug
 
-            include divider.pug
-
-            div(class="parallax slide-2")
+    div(class="parallax slide-2")
 
 
 

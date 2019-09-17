@@ -1,0 +1,12 @@
+include header.pug
+div(class="App")
+    div(class="parallax slide-login")
+        include welcomeImg.pug
+    div(class="container-fluid" id="login")
+        div(class="section-header text-center")
+            include welcome.pug
+        form(id="login-form"  action='./main' method="POST" role="form" class="rounded-right rounded-left")
+            | Oh - this is awkward - you thought you were invited? Do you have password then? (hint: its foobar)
+            div(class="form-group col-6 offset-3")
+                input(name="pwd" type="password" class="form-control" id="pwd")
+                button(type="submit" class="btn btn-primary") Submit

@@ -55,6 +55,10 @@ html, body {
     background-image: url("../images/wedding-5.jpg");
 }
 
+.slide-error {
+    background-image: url("../images/ending.jpeg");
+}
+
 .slide-3{
     /* The image used */
     background-image: url("../images/mainPhoto1.jpeg");
