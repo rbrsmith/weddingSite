@@ -20,7 +20,8 @@ router.get('/', function(req, res, next) {
 //    res.sendFile("index.html", { root: './views/' });
     } else {
       //res.render('index', { title: 'Express' });
-      res.sendFile("login.html", {root: "./views/"});
+//      res.sendFile("login.html", {root: "./views/"});
+        res.render("loginPage", {});
     }
   });
 });

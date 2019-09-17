@@ -26,7 +26,8 @@ router.post('/', function(req, res, next) {
 
           console.log("Sending error");
           console.log(err);
-          res.sendFile("error.html", { root: './views/' });
+//          res.sendFile("error.html", { root: './views/' });
+          res.render("errorPage", {});
         }
 
 
@@ -61,7 +62,8 @@ router.get('/', function(req, res, next) {
       res.render("indexPage", {name: name});
     } else {
       console.log("Sending error");
-      res.sendFile("error.html", {root: './views/'});
+      //res.sendFile("error.html", {root: './views/'});
+      res.render("errorPage", {});
     }
   });
 
