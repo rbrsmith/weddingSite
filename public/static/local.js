@@ -35,7 +35,7 @@ $(document).ready(function () {
    });
 
    $("#rsvp-quick-link").click(function(e) {
-      const element = document.getElementById('rsvp-form');
+      const element = document.getElementById('rsvp');
       element.scrollIntoView();
    });
 });
