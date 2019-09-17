@@ -1,7 +1,7 @@
 $(document).ready(function () {
    $("#rsvp-form").submit(function (e) {
       e.preventDefault(); //prevent default form submit
-      var rsvpFormData = $("#rsvp-form").serializeArray();
+      var rsvpFormDataArray = $("#rsvp-form").serializeArray();
       // var rsvpFormData = $('#rsvp-form').serializeArray().reduce(function (obj, item) {
       //    if(item.name === "joiningfor" && obj[item.name] !== undefined) {
       //       const currentJoiningFor = obj[item.name];
@@ -27,11 +27,17 @@ $(document).ready(function () {
       }
 
       joiningFor.value = joiningForValue;
-      rsvpFormData.push(joiningFor);
+      rsvpFormDataArray.push(joiningFor);
+
+
+
+      const rsvpFormData = rsvpFormDataArray.reduce(function (obj, item) {
+         obj[item.name] = item.value;
+         return obj;
+      }, {});
 
       console.log("RSVP FORM DATA");
       console.log(rsvpFormData);
-
 
 
       if(typeof rsvpFormData.rsvpname === "undefined" || rsvpFormData.rsvpname === null || rsvpFormData.rsvpname === "") {
