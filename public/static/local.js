@@ -2,16 +2,6 @@ $(document).ready(function () {
    $("#rsvp-form").submit(function (e) {
       e.preventDefault(); //prevent default form submit
       var rsvpFormDataArray = $("#rsvp-form").serializeArray();
-      // var rsvpFormData = $('#rsvp-form').serializeArray().reduce(function (obj, item) {
-      //    if(item.name === "joiningfor" && obj[item.name] !== undefined) {
-      //       const currentJoiningFor = obj[item.name];
-      //       obj[item.name] = currentJoiningFor + " & " + item.value;
-      //    } else {
-      //       obj[item.name] = item.value;
-      //    }
-      //    return obj;
-      //
-      // }, {});
 
       var joiningFor = {name:"joiningfor"};
 
@@ -90,7 +80,7 @@ const setCookie = function(name) {
       data: JSON.stringify(nameData)
    }).done(function (data) {
       console.log(data);
-      $("#rsvp").html("Thanks " + name + " for your RSVP");
+      $("#rsvp").html("Thanks " + name + " for your RSVP.  If you provided an email we will shortly be emailing you with confirmation :)");
 
    });
 }
