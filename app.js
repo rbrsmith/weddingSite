@@ -16,7 +16,7 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-process.env.PORT = 80;
+//process.env.PORT = 80;
 
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
