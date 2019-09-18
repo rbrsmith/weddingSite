@@ -6,7 +6,6 @@ var router = express.Router();
 router.options("/", function(req, res, next) {
    console.log("Setting session name" + req.body.name);
 
-   req.session.name = req.body.name;
    var allowedOrigins = ['http://rosolynwedding.com:3000', 'http://www.rosolynwedding.com:3000','http://www.rosolynwedding.com', 'http://rosolynwedding.com'];
    var origin = req.headers.origin;
    console.log("oring: " + origin);

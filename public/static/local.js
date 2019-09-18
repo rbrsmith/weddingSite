@@ -74,7 +74,7 @@ const setCookie = function(name) {
 
    $.ajax({
       type: 'POST',
-      url: 'http://rosolynwedding.com:3000/rsvp',
+      url: 'http://www.rosolynwedding.com/rsvp',
       contentType: 'application/json; charset=utf-8',
       dataType: 'html',
       data: JSON.stringify(nameData)
