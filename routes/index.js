@@ -18,7 +18,6 @@ router.post('/', function(req, res, next) {
         if(result) {
           console.log("Getting session name: " + req.session.name);
           const name = (req.session.name) ? req.session.name : undefined;
-
           //   res.sendFile("index.html", { root: './views/' });
           res.render("indexPage", {name: name});
 
@@ -57,7 +56,6 @@ router.get('/', function(req, res, next) {
       console.log("Getting session name: " + req.session.name);
 
       const name = (req.session.name) ? req.session.name : undefined;
-
       //res.sendFile("index.html", { root: './views/' });
       res.render("indexPage", {name: name});
     } else {
