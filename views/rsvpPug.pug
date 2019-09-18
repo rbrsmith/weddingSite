@@ -2,26 +2,26 @@ div(class="container-fluid" id="rsvp")
     div(class="section-header text-center")
         h1 RSVP
 
-    div(id="rsvp-info") Please fill in the RSVP
+    div(id="rsvp-info") Please fill in the RSVP.  If any questions / concerns please feel free to reach out to us [+447379377797 / +447397186222].
 
     form(id="rsvp-form" class="rounded-right rounded-left")
         div(class="form-group col-6 offset-3")
-            label(for="rsvp-name") Names
-            input(type="text" class="form-control" id="rsvp-name" name="rsvpname")
+            label(for="rsvp-name") <strong>Please enter your name(s) of who will be attending</strong>
+            input(type="text" class="form-control" id="rsvp-name" name="rsvpname" placeholder="Names of all guest")
 
         div(class="form-group col-6 offset-3")
-            label(for="rsvp-email") Email
-            input(type="text" class="form-control" id="rsvp-email" name="rsvpemail")
+            label(for="rsvp-email") <strong>Please enter your email so we can contact you if needed (optional) </strong>
+            input(type="text" class="form-control" id="rsvp-email" name="rsvpemail" placeholder="Contact email")
 
         div(class="form-group col-6  offset-3")
-            span I'll be joining you for:
+            span <strong>Please let us know what days you hope to be joining us for:</strong>
             br
             div(class="custom-control custom-checkbox")
                 input(type="checkbox" class="custom-control-input" id="friday")
                 label(class="custom-control-label" for="friday") Friday night Pizzas
             div(class="custom-control custom-checkbox")
                 input(type="checkbox" class="custom-control-input" id="saturday" "checked")
-                label(class="custom-control-label" for="saturday") Saturday Cereomony
+                label(class="custom-control-label" for="saturday") Saturday Ceremony
             div(class="custom-control custom-checkbox")
                 input(type="checkbox" class="custom-control-input" id="sunday")
                 label(class="custom-control-label" for="sunday") Sunday BBQ
@@ -29,11 +29,11 @@ div(class="container-fluid" id="rsvp")
 
 
         div(class="form-group col-6 offset-3")
-            label(for="rsvp-constraint") Dietary Constraints
-            input(type="text" class="form-control" id="rsvp-constraint" name="rsvpconstraint")
+            label(for="rsvp-constraint") <strong>Please let us know of any other details (beds for children / dietary constraints / etc) </strong>
+            input(type="text" class="form-control" id="rsvp-constraint" name="rsvpconstraint" placeholder="Any additional information that may be relevant")
 
         div(class="form-group col-6  offset-3" id="accomadation")
-            | Would you like to use our sourced accomadation and stay at the Cheateau?
+            | <strong>Would you like to use our sourced accomadation and stay on the Cheateau grounds?</strong>
             div(class="form-check")
                 input(class="form-check-input" type="radio" name="accomadation" id="yesaccomadate" value="yesaccomadate" checked)
                 label(class="form-check-label" for="yesaccomadate")
@@ -44,4 +44,4 @@ div(class="container-fluid" id="rsvp")
                 label(class="form-check-label" for="noaccomadate")
                     | No
 
-        button(class="btn btn-primary") Submit
+        button(class="btn btn-primary") Send RSVP
