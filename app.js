@@ -16,6 +16,8 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
+process.env.PORT = 80;
+
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
@@ -50,6 +52,7 @@ app.use('/main', mainRouter);
 app.use('/login', loginRouter);
 app.use("/rsvp", rsvpRouter);
 app.use("/status", statusRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
