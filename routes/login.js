@@ -6,6 +6,7 @@ const pwdHash = '$2b$10$Q4vqTnoUnINra/fEQio3zepBpBgKve04o8cbT5Erc5t1mzY6V/UQy';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  console.log("Login page requested");
 
   bcrypt.compare(req.session.pwd, pwdHash, function(err, result) {
     if (result) {
@@ -14,13 +15,11 @@ router.get('/', function(req, res, next) {
 
       const name = (req.session.name) ? req.session.name : undefined;
 
-      //res.sendFile("index.html", { root: './views/' });
+      console.log("Sending index page");
       res.render("indexPage", {name: name});
 
-//    res.sendFile("index.html", { root: './views/' });
     } else {
-      //res.render('index', { title: 'Express' });
-//      res.sendFile("login.html", {root: "./views/"});
+        console.log("Sending login page");
         res.render("loginPage", {});
     }
   });
