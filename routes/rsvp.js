@@ -1,18 +1,19 @@
 var express = require('express');
 const mongo = require('mongodb').MongoClient
 var router = express.Router();
-
+var moment = require("moment");
+var timestamp = moment().format('YYYY-MM-DD:hh:mm:ss');
 
 router.options("/", function(req, res, next) {
-   console.log("rsv OPTIONS req");
-   console.log("Setting session name" + req.body.name);
+   console.log(timestamp + ": rsv OPTIONS req");
+   console.log(timestamp  + ": Setting session name" + req.body.name);
 
    var allowedOrigins = ['http://rosolynwedding.com:3000', 'http://www.rosolynwedding.com:3000','http://www.rosolynwedding.com', 'http://rosolynwedding.com'];
    var origin = req.headers.origin;
-   console.log("origin: " + origin);
+   console.log(timestamp + ": origin: " + origin);
 
    if(allowedOrigins.indexOf(origin) > -1){
-      console.log("Setting header");
+      console.log(timestamp + ": Setting header");
       res.setHeader('Access-Control-Allow-Origin', origin);
    }
 
@@ -20,7 +21,7 @@ router.options("/", function(req, res, next) {
    res.setHeader("Access-Control-Allow-Headers", "X-PINGOTHER, Content-Type");
    res.setHeader("Access-Control-Max-Age", "86400");
 
-   console.log("Sending success");
+   console.log(timestamp +": Sending success");
    res.send(JSON.stringify({
       status:"success"
    }));
@@ -29,20 +30,20 @@ router.options("/", function(req, res, next) {
 
 
 router.post("/", function(req, res, next) {
-   console.log("rsvp POST req");
-   console.log("Setting session name" + req.body.name);
+   console.log(timestamp + ": rsvp POST req");
+   console.log(timestamp + ": Setting session name" + req.body.name);
 
    req.session.name = req.body.name;
    var allowedOrigins = ['http://rosolynwedding.com:3000', 'http://www.rosolynwedding.com:3000','http://www.rosolynwedding.com', 'http://rosolynwedding.com'];
    var origin = req.headers.origin;
-   console.log("origin: " + origin);
+   console.log(timestamp + ": origin: " + origin);
 
    if(allowedOrigins.indexOf(origin) > -1){
-      console.log("Setting header");
+      console.log(timestamp + ": Setting header");
       res.setHeader('Access-Control-Allow-Origin', origin);
    }
 
-   console.log("Sending success");
+   console.log(timestamp + ": Sending success");
    res.send(JSON.stringify({
       status:"success"
    }));
