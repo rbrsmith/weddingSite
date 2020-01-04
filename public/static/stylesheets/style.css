@@ -291,5 +291,8 @@ html, body {
 
 .travel-info-btn {
     margin: auto;
+}
 
+#norsvp {
+    margin-left:15px
 }
