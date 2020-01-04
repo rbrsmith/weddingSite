@@ -1,6 +1,7 @@
 $(document).ready(function () {
    $("#rsvp-form").submit(function (e) {
       e.preventDefault(); //prevent default form submit
+      var rsvpId = $(document.activeElement)[0].id
       var rsvpFormDataArray = $("#rsvp-form").serializeArray();
 
       var joiningFor = {name:"joiningfor"};
@@ -16,9 +17,12 @@ $(document).ready(function () {
          joiningForValue += "Sunday";
       }
 
+      if(rsvpId === "norsvp") {
+         joiningForValue = "I wont be attending"
+      }
+
       joiningFor.value = joiningForValue;
       rsvpFormDataArray.push(joiningFor);
-
 
 
       const rsvpFormData = rsvpFormDataArray.reduce(function (obj, item) {
