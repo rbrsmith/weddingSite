@@ -86,7 +86,7 @@ const setCookie = function(name) {
       data: JSON.stringify(nameData)
    }).done(function (data) {
       console.log(data);
-      $("#rsvp").html("Thanks " + name + " for your RSVP.  If you provided an email we will shortly be emailing you with confirmation :)");
+      $("#rsvp").html("Thanks " + name + " for your RSVP.  If you're atteneding and provided an email we will shortly be emailing you with details :)");
 
    });
 }
